@@ -21,12 +21,6 @@ export default function Circle(props){
             >
                 <p>News</p>
             </div>
-            <div
-                className={`circle ${props.activeComponent === "Analytics" ? "circle-clicked" : ""}`}
-                onClick={() => props.handleComponentChange("Analytics")}
-            >
-                <p>Analytics</p>
-            </div>
         </div>
     )   
 }

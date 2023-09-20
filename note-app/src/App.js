@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import About from "./components/About";
 import News from "./components/News";
-import Analytics from "./components/Analytics";
 import Circle from "./components/Circle";
 
 export default function App() {
@@ -31,7 +30,6 @@ export default function App() {
       {activeComponent === "Main" && <Main darkMode={darkMode}  />}
       {activeComponent === "About" && <About darkMode={darkMode}  />}
       {activeComponent === "News" && <News darkMode={darkMode}   />}
-      {activeComponent === "Analytics" && <Analytics darkMode={darkMode}   />}
       <Circle activeComponent={activeComponent} handleComponentChange={handleComponentChange} darkMode={darkMode}/>
     </div>
   );

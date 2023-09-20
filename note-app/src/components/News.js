@@ -19,20 +19,22 @@ export default function News(props) {
   };
 
   // Function to fetch news data
-  const fetchNewsData = () => {
-    axios
-      .get(`https://newsapi.org/v2/top-headlines?country=cz&apiKey=${apiKey}`)
-      .then((response) => {
-        const articles = response.data.articles.map((article) => ({
-          ...article,
-          publishedAt: formatDate(article.publishedAt),
-        }));
-        setNews(articles);
-        console.log(articles)
-      })
-      .catch((error) => {
-        console.error("Error fetching news:", error);
-      });
+  const fetchNewsData = async () => {
+    try {
+      const response = await axios.get(
+        `https://newsapi.org/v2/top-headlines?country=cz&apiKey=${apiKey}`
+      );
+
+      const articles = response.data.articles.map((article) => ({
+        ...article,
+        publishedAt: formatDate(article.publishedAt),
+      }));
+
+      setNews(articles);
+      console.log(articles);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
   };
 
   // Fetch news data when the component mounts

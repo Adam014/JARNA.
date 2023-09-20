@@ -1,5 +1,5 @@
 import React from "react"
-import Underline from "./images/underline.png"
+import Underline from "../images/underline.png"
 
 export default function Navbar(props){
     return ( 

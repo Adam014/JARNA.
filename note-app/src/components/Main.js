@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Note from "./Note";
 import { onSnapshot, addDoc, serverTimestamp, doc, deleteDoc, } from "firebase/firestore";
-import { postColletion, db } from "./firebase";
+import { postColletion, db } from "../firebase";
 
 export default function Main(props) {
   const [post, setPost] = useState({

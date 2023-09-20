@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import './App.css';
-import Navbar from "./Navbar";
-import Main from "./Main";
-import About from "./About";
-import News from "./News";
-import Analytics from "./Analytics";
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
+import About from "./components/About";
+import News from "./components/News";
+import Analytics from "./components/Analytics";
 
 export default function App() {
   const [activeComponent, setActiveComponent] = useState("Main");

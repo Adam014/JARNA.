@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&display=swap')
 
+$orangeColor : #DE411A
+$navbarDarkBackground : #1A1A21
+$darkBackground : #21222A
+$whiteBackground: white
+$maxWidthAndHeight : 100%
+
 *
   margin: 0
   box-sizing: border-box
 
+@mixin grid-center()
+  display: grid
+  justify-content: center
+
 body, html
   font-family: 'Bebas Neue', sans-serif
-  height: 100%
+  height: $maxWidthAndHeight
   margin: 0
   padding: 0
   overflow: hidden
@@ -19,7 +29,7 @@ body, html
   user-select: none
 
 .App
-  height: 100%
+  height: $maxWidthAndHeight
 
 #root
   height: 100vh
@@ -38,7 +48,7 @@ body, html
   z-index: 1
 
 .dark-nav
-  background-color: #1A1A21
+  background-color: $navbarDarkBackground
   color: white
   padding: 30px 25px
   height: 85px
@@ -64,7 +74,7 @@ body, html
     color: black
 
 .dark-top-container
-  background-color: #21222A
+  background-color: $darkBackground
   display: flex
   align-items: center
   justify-content: space-between
@@ -79,7 +89,7 @@ body, html
     transition: 0.5s ease-in-out
 
     &:hover
-      color: #DE411A !important
+      color: $orangeColor !important
 
 .dark-top-container .socials i
   color: white
@@ -148,12 +158,12 @@ body, html
 main
   background-color: white
   color: black
-  height: 100%
+  height: $maxWidthAndHeight
 
   &.dark
     background-color: #282D35
     color: white
-    height: 100%
+    height: $maxWidthAndHeight
 
 .post-input
   textarea, input
@@ -165,7 +175,7 @@ main
 .dark textarea
   width: 65rem
   height: 100px
-  background-color: #21222A
+  background-color: $darkBackground
   color: white
 
 .post-input input
@@ -178,7 +188,7 @@ main
 .dark input
   height: 50px
   margin-bottom: 20px
-  background-color: #21222A
+  background-color: $darkBackground
   color: white
   border: 1px solid grey
 
@@ -209,10 +219,10 @@ main
 
 .post-input button, .dark-input button
   margin-top: 20px
-  width: 100%
+  width: $maxWidthAndHeight
   height: 40px
   border-radius: 10px
-  background-color: #DE411A
+  background-color: $orangeColor
   cursor: pointer
 
 form
@@ -220,9 +230,9 @@ form
 
 .note-container
   background-color: white
-  display: grid
+  @include grid-center
   color: black
-  justify-content: center
+  
 
 .note
   padding: 20px 0px 20px 0px
@@ -231,8 +241,7 @@ form
 .dark-note
   background-color: #282D35
   color: white
-  display: grid
-  justify-content: center
+  @include grid-center
 
 .note
   h4
@@ -261,12 +270,12 @@ form
     cursor: pointer
 
     &:hover
-      color: #DE411A
+      color: $orangeColor
 
 .no-notes
   display: flex
   justify-content: center
-  width: 100%
+  width: $maxWidthAndHeight
   padding-top: 100px
 
 // Circle hamburger  
@@ -275,7 +284,7 @@ form
   height: 30px
   width: 30px
   border-radius: 20px
-  background-color: #DE411A
+  background-color: $orangeColor
   transition: 0.3s ease-in
   margin-bottom: 10px
 
@@ -283,7 +292,7 @@ form
   height: 30px
   width: 30px
   border-radius: 20px
-  border: 2px solid #DE411A
+  border: 2px solid $orangeColor
   transition: 0.3s ease-in
   margin-bottom: 10px
 
@@ -298,9 +307,9 @@ form
   padding: 4px 0px 0px 40px
 
 .circle:hover
-  background-color: #DE411A
+  background-color: $orangeColor
   cursor: pointer
-  color: #DE411A
+  color: $orangeColor
 
 // About.js 
 
@@ -315,16 +324,17 @@ form
   color: black
 
 .about-card-container
-  width: 100%
-  height: 100%
+  width: $maxWidthAndHeight
+  height: $maxWidthAndHeight
   display: flex
   justify-content: center
   align-items: center
+  padding-bottom: 100px
 
 .about-card
   height: 20rem
   width: 50rem
-  background-color: #21222A
+  background-color: $darkBackground
   border-radius: 30px
 
 .about-container .about-card
@@ -348,7 +358,7 @@ form
     font-size: 1.4rem
 
   a
-    color: #DE411A
+    color: $orangeColor
 
   p
     padding: 40px
@@ -359,20 +369,18 @@ form
 .dark-container
   background-color: #282D35
   color: white
-  height: 100%
+  height: $maxWidthAndHeight
 
 .container
   color: black
   background-color: white
 
 .dark-news-container
-  display: grid
-  justify-content: center
+  @include grid-center
   background-color: #282D35
 
 .news-container
-  display: grid
-  justify-content: center
+  @include grid-center
   background-color: white
 
   h1
@@ -386,14 +394,14 @@ form
 
 .reload-button
   margin-top: 20px
-  width: 100%
+  width: $maxWidthAndHeight
   height: 30px
   border-radius: 10px
-  background-color: #DE411A
+  background-color: $orangeColor
   cursor: pointer
   color: white
 
 .note a
   text-decoration: none
-  color: #DE411A
+  color: $orangeColor
   font-size: 1.1rem

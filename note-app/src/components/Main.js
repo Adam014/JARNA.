@@ -20,8 +20,7 @@ export default function Main(props) {
         ...doc.data(),
         id: doc.id,
       }));
-        notesArray.sort((a, b) => b.date.toDate() - a.date.toDate());
-
+      notesArray.sort((a, b) => b.date.toDate() - a.date.toDate());
       setNotes(notesArray);
     });
     return unsub;
@@ -56,7 +55,6 @@ export default function Main(props) {
           author: "",
           title: "",
           text: "",
-          date: "", // Reset date to null
         });
       })
       .catch((error) => {

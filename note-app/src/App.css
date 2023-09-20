@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&display=swap');
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body, html{
+    font-family: 'Bebas Neue', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.App{
+    height: 100%;
+}
+
+#root {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* NAVBAR */
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    height: 85px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    z-index: 1;
+}
+
+.dark-nav {
+    background-color: #1A1A21;
+    color: white;
+    padding: 30px 25px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.dark-nav h3{
+    font-size: 2rem;
+    letter-spacing: 10px;
+    padding-top: 11px
+}
+
+.nav h3{
+    font-size: 2rem;
+    letter-spacing: 10px;
+    padding-top: 11px
+}
+
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-container .socials a i{
+    color:black;
+}
+
+.dark-top-container{
+    background-color: #21222A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.socials{
+    padding-left: 80px;
+}
+
+.socials i{
+    font-size: 1.5rem;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.socials i:hover{
+    color:#DE411A !important;
+}
+
+.dark-top-container .socials i{
+    color: white;
+}
+
+/* Darkmode toggler in navbar */
+
+.toggler{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.toggler p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.dark-navbar .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dark-navbar .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+.dark-navbar .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+.dark-navbar .toggler-dark {
+    color: #FFFFFF;
+}
+
+.dark-navbar .toggler--slider {
+    justify-content: flex-end;
+}
+
+.title-logo img{
+    height: 6px;
+    margin-bottom: 10px;
+}
+
+/* Main.js */
+
+main {
+    background-color: white;
+    color: black;
+    height:100%;
+}
+
+main.dark {
+    background-color: #282D35;
+    color: white;   
+    height: 100%;
+}
+
+.post-input textarea, .post-input input{
+    width: 65rem;
+    height:100px;
+    background-color: white;
+    color:black;
+}
+
+.dark textarea{
+    width: 65rem;
+    height:100px;
+    background-color: #21222A;
+    color:white;
+}
+
+.post-input input{
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    color:black;
+    border: 1px solid grey;
+}
+
+.dark input{
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #21222A;
+    color:white;
+    border: 1px solid grey;
+}
+
+.post-input, .dark-input{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dark-input button{
+    color:white;
+    border: 1px solid grey;
+}
+
+.post-input button{
+    color:white;
+    border: 1px solid black;
+}
+
+.dark button:focus{
+    outline:0;
+}
+
+.post-input button, .dark-input button{
+    margin-top: 20px;
+    width:100%;
+    height:40px;
+    border-radius:10px;
+    background-color: #DE411A;
+    cursor: pointer;
+}
+
+form{
+    display: grid;
+}
+
+.note-container{
+    background-color: white;
+    display:grid;
+    color:black;
+    justify-content: center;
+}
+
+.note{
+    padding: 20px 0px 20px 0px;
+    width:65rem;
+}
+
+.dark-note{
+    background-color: #282D35;
+    color: white;
+    display:grid;
+    justify-content: center;
+}
+
+.note h4{
+    padding-top: 20px;
+}
+
+.note p{
+    padding-top: 20px;
+    opacity: 0.8;
+}
+
+.title{
+    display: flex;
+    justify-content:space-between;
+}
+
+.note img{
+    height:150px;   
+    width: 220px;
+    margin-top: 20px;
+}
+
+.remove-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px 0px 0px;
+}
+
+.remove-icon-container i{
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.remove-icon-container i:hover{
+    color:#DE411A;
+}
+
+.no-notes{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 100px;
+}
+
+/* Circle hamburger */
+
+.circle-clicked{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color:  #DE411A;
+    transition: 0.3s ease-in;
+    margin-bottom: 10px;
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    border: 2px solid #DE411A;
+    transition: 0.3s ease-in;
+    margin-bottom: 10px;
+}
+
+.circle-container{
+    display: grid;
+    justify-content: flex-start;
+    padding: 0px 150px 0px 50px;
+    position: absolute;
+    top: 40%;
+}   
+
+.circle p, .circle-clicked p{
+    padding: 4px 0px 0px 40px;
+}
+
+.circle:hover{
+    background-color: #DE411A;
+    cursor: pointer;
+    color: #DE411A;
+}
+
+/* About.js */
+
+
+.dark-about-container{
+    height: 86%;
+    background-color: #282D35;
+    color: white;
+}
+
+.about-container{
+    height: 86%;
+    background-color: white;
+    color: black;
+}
+
+.about-card-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card{
+    height: 20rem;
+    width: 50rem;
+    background-color: #21222A;
+    border-radius: 30px;
+}
+
+.about-container .about-card{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: white;
+}
+
+.about-title-logo{
+    padding: 40px;
+}
+
+.about-title-logo h3{
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+.about-title-logo img{
+    height: 6px;
+    margin-bottom: 10px;
+}
+
+.about-card h4{
+    padding: 0px 40px 0px 40px;
+    font-size: 1.4rem;
+}
+
+.about-card a{
+    color:#DE411A;
+}
+
+.about-card p{
+    padding: 40px;
+    opacity: 0.7;
+}
+
+/* News.js */
+
+.dark-container{
+    background-color: #282D35;
+    color: white;
+    height: 100%;
+}
+
+.container{
+    color:black;
+    background-color: white;
+}
+
+.dark-news-container{
+    display: grid;
+    justify-content: center;
+    background-color: #282D35;
+}
+
+.news-container{
+    display: grid;
+    justify-content: center;
+    background-color: white;
+}
+
+.news-container h1, .dark-news-container h1{
+   padding-top: 50px;
+}
+
+.news-container h3, .dark-news-container h3{
+    padding: 5px;
+}
+
+.reload-button{
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #DE411A;
+    cursor: pointer; 
+    color: white;
+}
+
+.note a{
+    text-decoration: none;
+    color:#DE411A;
+    font-size: 1.1rem;
+}

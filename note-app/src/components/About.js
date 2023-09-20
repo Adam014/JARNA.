@@ -4,32 +4,6 @@ import Underline from "../images/underline.png"
 export default function About(props){
     return(
         <div className={props.darkMode ? "dark-about-container": "about-container"}>
-            <div className="circle-container">
-                <div
-                    className={`circle ${props.activeComponent === "Main" ? "circle-clicked" : ""}`}
-                    onClick={() => props.handleComponentChange("Main")}
-                >
-                    <p>Home</p>
-                </div>
-                <div
-                    className={`circle ${props.activeComponent === "About" ? "circle-clicked" : ""}`}
-                    onClick={() => props.handleComponentChange("About")}
-                >
-                    <p>About</p>
-                </div>
-                <div
-                    className={`circle ${props.activeComponent === "News" ? "circle-clicked" : ""}`}
-                    onClick={() => props.handleComponentChange("News")}
-                >
-                    <p>News</p>
-                </div>
-                <div
-                    className={`circle ${props.activeComponent === "Analytics" ? "circle-clicked" : ""}`}
-                    onClick={() => props.handleComponentChange("Analytics")}
-                >
-                    <p>Analytics</p>
-                </div>
-            </div>
             <div className="about-card-container">
                 <div className="about-card">
                     <div className="about-title-logo">
